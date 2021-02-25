@@ -1,0 +1,18 @@
+{
+  "name": "platziverse-db",
+  "version": "1.0.0",
+  "description": "A Simple IoT Platform - DB Module",
+  "main": "index.js",
+  "scripts": {
+    "lint":"standard --fix"
+  },
+  "keywords": [
+    "Nodejs",
+    "Api"
+  ],
+  "author": "Eric Gomez <eric.gomez.sanchez@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
