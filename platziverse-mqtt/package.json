@@ -1,0 +1,25 @@
+{
+  "name": "platziverse-mqtt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Simple Platform - MQTT Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server.js",
+    "start-dev": "redis-server & DEBUG=platziverse:* nodemon server.js",
+    "lint": "standard"
+  },
+  "author": "Eric Gomez <eric.gomez.sanchez@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "debug": "^3.2.7",
+    "jsonschema": "^1.2.6",
+    "mosca": "^2.8.3",
+    "redis": "^3.0.2"
+  }
+}
