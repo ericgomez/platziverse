@@ -7,7 +7,7 @@
   "scripts": {
     "start": "NODE_ENV=production node server.js",
     "start-dev": "redis-server & DEBUG=platziverse:* nodemon server.js",
-    "lint": "standard"
+    "lint": "standard --fix"
   },
   "author": "Eric Gomez <eric.gomez.sanchez@gmail.com>",
   "license": "MIT",
