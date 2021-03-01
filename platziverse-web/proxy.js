@@ -1,7 +1,7 @@
 'use strict'
 
 const express = require('express')
-const axios = require('axios')
+const request = require('request-promise-native')
 
 const { endpoint, apiToken } = require('./config')
 
@@ -12,14 +12,14 @@ api.get('/agents', async (req, res, next) => {
     method: 'GET',
     url: `${endpoint}/api/agents`,
     headers: {
-      Authorization: `Bearer ${apiToken}`
+      'Authorization': `Bearer ${apiToken}`
     },
     json: true
   }
 
   let result
   try {
-    result = await axios.get(options)
+    result = await request(options)
   } catch (e) {
     return next(new Error(e.error.error))
   }
@@ -33,14 +33,14 @@ api.get('/agent/:uuid', async (req, res, next) => {
     method: 'GET',
     url: `${endpoint}/api/agent/${uuid}`,
     headers: {
-      Authorization: `Bearer ${apiToken}`
+      'Authorization': `Bearer ${apiToken}`
     },
     json: true
   }
 
   let result
   try {
-    result = await axios.get(options)
+    result = await request(options)
   } catch (e) {
     return next(new Error(e.error.error))
   }
@@ -54,14 +54,14 @@ api.get('/metrics/:uuid', async (req, res, next) => {
     method: 'GET',
     url: `${endpoint}/api/metrics/${uuid}`,
     headers: {
-      Authorization: `Bearer ${apiToken}`
+      'Authorization': `Bearer ${apiToken}`
     },
     json: true
   }
 
   let result
   try {
-    result = await axios.get(options)
+    result = await request(options)
   } catch (e) {
     return next(new Error(e.error.error))
   }
@@ -75,14 +75,14 @@ api.get('/metrics/:uuid/:type', async (req, res, next) => {
     method: 'GET',
     url: `${endpoint}/api/metrics/${uuid}/${type}`,
     headers: {
-      Authorization: `Bearer ${apiToken}`
+      'Authorization': `Bearer ${apiToken}`
     },
     json: true
   }
 
   let result
   try {
-    result = await axios.get(options)
+    result = await request(options)
   } catch (e) {
     return next(new Error(e.error.error))
   }
