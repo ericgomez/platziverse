@@ -1,7 +1,8 @@
 <template>
   <div>
     <!--- el uuid es el que nos entrega el platziverse-agent  node examples/index.js  -->
-    <metric uuid="e1c690fd-f401-4a3b-93c1-319b36a19ee3" type="promiseMetric" :socket="socket"></metric>
+    <!-- <metric uuid="e1c690fd-f401-4a3b-93c1-319b36a19ee3" type="promiseMetric" :socket="socket"></metric> -->
+    <agent uuid="690ce13f-763c-40a7-86ac-f8cba71488ba"  :socket="socket"></agent>
     <agent
       v-for="agent in agents"
       :uuid="agent.uuid"
