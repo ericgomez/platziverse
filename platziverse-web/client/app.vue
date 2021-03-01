@@ -1,6 +1,7 @@
 <template>
   <div>
-    <metric uuid="3a3b3099-a57d-43a0-9df4-706bcc90ae25" type="promiseMetric" ></metric>
+    <!--- el uuid es el que nos entrega el platziverse-agent  node examples/index.js  -->
+    <metric uuid="e1c690fd-f401-4a3b-93c1-319b36a19ee3" type="promiseMetric" :socket="socket"></metric>
     <agent
       v-for="agent in agents"
       :uuid="agent.uuid"
@@ -19,11 +20,15 @@
 </style>
 
 <script>
+const io = require('socket.io-client')
+const socket = io()
+
 module.exports = {
   data () {
     return {
       agents: [],
-      error: null
+      error: null,
+      socket
     }
   },
   mounted () {
