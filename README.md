@@ -1,7 +1,23 @@
 # Curso Avanzado de Node.js
 #### Proyecto del curso
 
-## platziverse
+![Proyect](https://static.platzi.com/media/user_upload/ProyectNode-fd2b1421-0e22-49df-a2fe-d89afdc52cfe.jpg)
+
+## PlatziVERSE
+
+> Aplicacion Platziverse (Plataforma de IoT)
+
+**Componentes:**
+- **platziversedb (Modulo)**: Comunicación con la Base de Datos. Aquí almacenaremos los componentes y las métricas que van a estar almacenando la información de la aplicación. Cada vez que ingrese información en tiempo real se almacenara mediante este modulo. También enviara información (en demanda) cada vez que se consulte la API.
+- **Agent (Agente de monitoreo)**: Definimos las métricas que queremos monitorear y de manera real-time. A través de MQTT entregaremos la información por dos canales de comunicación web (para mostrarlas) DB para guardarlas.
+- **Servidor (API)**: cargaremos las primeras 20 métricas para dibujar en pantalla una gráfica y después actualizarla de manera real-time. La conexión con el servidor web se hará mediante proxy para autenticación y tokens de JSON (JWT).
+
+![Structure](https://i.imgur.com/SeEckP4.jpg)
+
+## API del proyecto
+> [platziverseAPI](https://github.com/ericgomez/platziverseAPI)
+
+
 
 ### Contenido:
 - Inicio del curso
@@ -204,6 +220,10 @@ Asegurando nuestra API con express-jwt
 
 - Integración con el agente de monitoreo 1
 
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 - Integración con el agente de monitoreo 2
 
